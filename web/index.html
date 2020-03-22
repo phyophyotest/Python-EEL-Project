@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Python Restaurant Project</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" onclick="show('homeContainer')">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="show('tableContainer')">Tables</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="show('dishesContainer')">Dishes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="show('ordersContainer')">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="show('historyContainer')">History</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container" id="homeContainer">
+        <h1 class="text-center text-info my-5">Superman Restaurant</h1>
+        <div class="row">
+            <div class="col-md-4 offset-md-2 mb-3">
+                <div class="card bg-info">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mt-3 text-white">Tables</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-warning">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mt-3 text-white">Dishes</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 offset-md-2 mb-3">
+                <div class="card bg-danger">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mt-3 text-white">Orders</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-secondary">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mt-3 text-white">History</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="tableContainer">
+        <h1 class="text-center text-info">All Tables</h1>
+        <button class="btn btn-primary btn-sm" onclick="show('tableCreateContainer')">Create</button>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-dark text-white">
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="table_rows">
+                
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container" id="dishesContainer">Dishes</div>
+    <div class="container" id="ordersContainer">Orders</div>
+    <div class="container" id="historyContainer">History</div>
+    <div class="container" id="tableCreateContainer">
+        <h1 class="text-center my-5 text-info">Create New Table</h1>
+        <div class="col-md-6 offset-md-3">
+            <div class="form-group">
+                <label for="table_name">Table Name</label>
+                <input type="text" class="form-control rounded-0" id="create_table_name">
+            </div>
+            <button class="btn btn-primary btn-sm float-right" onclick="createTable()">Create</button>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./eel.js"></script>
+    <script src="main.js"></script>
+    <script src="table.js"></script>
+</body>
+
+</html>
